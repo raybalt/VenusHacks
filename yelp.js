@@ -14,10 +14,8 @@ function load(term) {
                     <div>Reviews: ${businesses[i].review_count}</div>
                     <div>Address: ${businesses[i].location.display_address}</div>
                     <div>Phone: ${businesses[i].display_phone}</div>
-                </div>
-                
+                </div>  
             `;
         }
-
     })
 }
