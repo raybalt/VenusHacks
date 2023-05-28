@@ -78,10 +78,29 @@
         osm.addTo(map);
 
         //Marker
-        var singleMarker = L.marker([33.562415, -117.667153]);
+        var singleMarker = L.marker([33.68627220762962, -117.84702594912318]);
         singleMarker.addTo(map);
-        var popup = singleMarker.bindPopup('Popup')
+        var popup = singleMarker.bindPopup('Wayne Lin, MD - Fertility Centers of Orange County')
         popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.68683754801586, -117.84790731474706]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Reproductive Fertility Center')
+        popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.68655562822065, -117.81514873275512]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Life IVF Center')
+        popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.686228400683646, -117.84701478208]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Fertility Care of Orange County')
+        popup.addTo(map);
+        singleMarker.openPopup();
 
         L.Control.geocoder().addTo(map);
 

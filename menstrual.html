@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 </head>
 
-<body onload='load("menstrual")'>
+<body onload='load("drug store")'>
     <div class="container">
         <nav class="contra">
             <div id="display"></div>
@@ -78,10 +78,23 @@
         osm.addTo(map);
 
         //Marker
-        var singleMarker = L.marker([33.562415, -117.667153]);
+        var singleMarker = L.marker([33.67084359873908, -117.78773115447576]);
         singleMarker.addTo(map);
-        var popup = singleMarker.bindPopup('Popup')
+        var popup = singleMarker.bindPopup('CVS Pharmacy')
         popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.69620463370623, -117.74194092901851]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Walgreens')
+        popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.696427883485406, -117.79854116344383]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('CVS Pharmacy')
+        popup.addTo(map);
+        singleMarker.openPopup();
 
         L.Control.geocoder().addTo(map);
 
