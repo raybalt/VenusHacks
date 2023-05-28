@@ -1,9 +1,9 @@
 
 
-function contra_load() {
-    fetch('http://127.0.0.1:5000/yelp-test').then(res => res.json()).then(contra_response => {
-        console.log(contra_response);
-        let businesses = contra_response.businesses;
+function load(term) {
+    fetch('http://127.0.0.1:5000/yelp-test?term=' + term).then(res => res.json()).then(response => {
+        console.log(response);
+        let businesses = response.businesses;
 
         for(let i = 0; i < businesses.length; i++){
             document.getElementById('display').innerHTML += `
