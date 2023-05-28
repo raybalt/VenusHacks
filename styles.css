@@ -67,13 +67,6 @@ body {
     width: 700px;
 }
 
-.contra-label   {
-    color: #FEA478;
-    padding: 5px;
-    margin: 10px;
-    background-color: #ffffff;
-    
-}
 
 .container {
     display: grid;
