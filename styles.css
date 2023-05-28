@@ -6,4 +6,26 @@
  box-shadow:  0 0 5px 1px #888;
 
 }
+body {
+    background-color: #EDC7B8 !important;
 
+}
+
+.contra {
+    overflow: scroll;
+}
+
+.contra-label   {
+    color: #260708;
+    border: 2px solid #260708;
+    padding: 12px;
+    margin: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 40px;
+}
