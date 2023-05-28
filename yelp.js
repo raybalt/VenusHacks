@@ -22,18 +22,5 @@ function load() {
             `;
         }
 
-        let reviews = response.reviews;
-
-        for(let i = 0; i < reviews.length; i++){
-            document.getElementById('display').innerHTML += `
-                <div class="card" style="width: 16rem;">
-
-                    <h5 class="card-title">${reviews[i].name}</h5>
-                    <div></div>
-
-                </div>
-                
-            `;
-        }
     })
 }

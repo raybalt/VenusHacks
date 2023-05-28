@@ -16,16 +16,19 @@ body {
 }
 
 .contra-label   {
-    color: #260708;
-    border: 2px solid #260708;
-    padding: 12px;
+    color: #FEA478;
+    padding: 5px;
     margin: 10px;
+    background-color: #ffffff;
+    
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
-    box-sizing: border-box;
-    padding: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
