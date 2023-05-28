@@ -1,3 +1,4 @@
+
 .abortion {
     background-color: #260708;
     color: #FEA478;
@@ -54,7 +55,7 @@
  padding: 20px;
  margin: 15px;
  box-shadow:  0 0 5px 1px #888;
-
+ font-family: PT Serif Caption;
 }
 body {
     background-color: #EDC7B8 !important;
@@ -63,6 +64,7 @@ body {
 
 .contra {
     overflow: scroll;
+    width: 700px;
 }
 
 .contra-label   {
