@@ -7,8 +7,8 @@ function load(term) {
 
         for(let i = 0; i < businesses.length; i++){
             document.getElementById('display').innerHTML += `
-                <div class="card" style="width: 40rem;">
-                    <h5 class="card-title">${businesses[i].name}</h5>
+                <div class="card" style="width: 40rem; font-family: "PT Serif Caption";">
+                    <h5 class="card-title"><b>${businesses[i].name}</b></h5>
                     <img height="150px" width="150px" src=${businesses[i].image_url}>
                     <div>Rating: ${businesses[i].rating}/5</div>
                     <div>Reviews: ${businesses[i].review_count}</div>

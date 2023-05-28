@@ -80,10 +80,29 @@
         osm.addTo(map);
 
         //Marker
+        var singleMarker = L.marker([33.68263598411736, -117.9203798327554]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Planned Parenthood - Costa Mesa Health Center')
+        popup.addTo(map);
+        singleMarker.openPopup();
+
         var singleMarker = L.marker([33.562415, -117.667153]);
         singleMarker.addTo(map);
-        var popup = singleMarker.bindPopup('Popup')
+        var popup = singleMarker.bindPopup('Kenneth A James, MD')
         popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.760289424879524, -117.84787498264565]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Planned Parenthood - Santa Ana Health Center')
+        popup.addTo(map);
+        singleMarker.openPopup();
+
+        var singleMarker = L.marker([33.6669989372799, -117.76376093090309]);
+        singleMarker.addTo(map);
+        var popup = singleMarker.bindPopup('Grace Yao, MD PhD')
+        popup.addTo(map);
+        singleMarker.openPopup();
 
         L.Control.geocoder().addTo(map);
 
