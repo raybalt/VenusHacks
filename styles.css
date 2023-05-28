@@ -1,12 +1,53 @@
 .abortion {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;  
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
 }
+
+.ivf {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.contraceptives {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.planb {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.menstrual {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 400px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
 .card {
  width: 100px;
  border: 2px solid gray;
