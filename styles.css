@@ -1,0 +1,85 @@
+.abortion {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.ivf {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.contraceptives {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 300px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.planb {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 200px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.menstrual {
+    background-color: #260708;
+    color: #FEA478;
+    border-radius: 12px;
+    width: 400px;
+    height: 70px;
+    font-size: 40px;
+    font-family: "PT Serif Caption";
+}
+
+.card {
+ width: 100px;
+ border: 2px solid gray;
+ padding: 20px;
+ margin: 15px;
+ box-shadow:  0 0 5px 1px #888;
+
+}
+body {
+    background-color: #EDC7B8 !important;
+
+}
+
+.contra {
+    overflow: scroll;
+}
+
+.contra-label   {
+    color: #FEA478;
+    padding: 5px;
+    margin: 10px;
+    background-color: #ffffff;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    box-sizing: border-box;
+}
