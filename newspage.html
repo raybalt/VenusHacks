@@ -1,39 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+
 <head>
   <meta charset="utf-8">
-  <title>Ora</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Women News</title>
+  <link rel="stylesheet" href="newsstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 <body>
-  <section class="colored-section nav-bar">
-    <!-- Nav Bar -->
-    <nav class="navbar" style="background-color: #7cc5e0;">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-left:8px" style="background-color: #7cc5e0;">
-        <div class="container-fluid">
-          <!-- LOGO IMAGE -->
-          <img src=" " alt="logo" width="50px">
-
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">NewsApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Women News!</h1>
+    <div class="row content">
+      <div class="card my-4 mx-2" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+            <a href="#" class="button" style="width: 100;">Read More</a>
           </div>
         </div>
-      </nav>
-    </nav>
-    
-    <h1>Women's News</h1>
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
+      </div>
     </div>
-  </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script>
+      const fetchNews = async (page, q) => {
+        console.log("Fetching news...");
+        var url = 'https://newsapi.org/v2/everything?' +
+          'q=' + q +
+          '&from=2023-05-27&' +
+          'pageSize=20&' +
+          'language=en&' +
+          'page=1&' +
+          'sortBy=popularity&' +
+          'apiKey=cc1c90c282594f19a327dff7def65774';
+
+        console.log('url', url)
+
+        var req = new Request(url);
+
+        let a = await fetch(req)
+        let response = await a.json()
+        console.log(JSON.stringify(response))
+        //let response = { "status": "ok", "totalResults": 16, "articles": [{ "source": { "id": "la-repubblica", "name": "La Repubblica" }, "author": "repubblicawww@repubblica.it (Redazione Repubblica.it)", "title": "Nvidia nuova regina del Nasdaq scommessa da mille miliardi", "description": "I produttori di chip sono i primi a monetizzare la corsa agli investimemti", "url": "https://www.repubblica.it/economia/2023/05/27/news/nvidia_nuova_regina_del_nasdaq_scommessa_da_mille_miliardi-401949725/", "urlToImage": "https://www.repstatic.it/content/nazionale/img/2023/05/27/023800723-4d8d24c9-59c7-494a-aef3-36c72049f128.jpg", "publishedAt": "2023-05-27T00:38:07Z", "content": "Ancora non è chiaro chi vincerà la corsa all'oro dell'intelligenza artificiale, tra OpenAI e Microsoft, Google e gli altri colossi degli algoritmi. Ma una cosa è già chiara: per competere ci vogliono… [+2703 chars]" }, { "source": { "id": null, "name": "Tinhte.vn" }, "author": "no-reply@tinhte.vn (Hải Đăng (boygia)), Hải Đăng (boygia)", "title": "Trên tay dây đeo Apple Watch bản LGBTQ+: Đẹp, êm ái, đa sắc màu", "description": "Dây đeo Apple Watch Pride phiên bản mới, nhằm ủng hộ cộng đồng LGBTQ+, đã có mặt tại Việt Nam và Tinh Tế trên tay sản phẩm này.\n \n\n \nChiếc dây đeo mới nằm trong dòng Pride vốn được Apple bán ra nhằm ủng hộ những người thuộc cộng đồng LGBT.", "url": "https://tinhte.vn/thread/tren-tay-day-deo-apple-watch-ban-lgbtq-dep-em-ai-da-sac-mau.3674183/", "urlToImage": "https://photo2.tinhte.vn/data/attachment-files/2023/05/6443740_day-deo-apple-watch-glbtq-tinhte.jpg", "publishedAt": "2023-05-27T00:37:06Z", "content": "Mình rt thích chic khuy cài có in dòng ch Pride này. Chúng gi nh nhng kiu khuy hay có trên qun, áo khoác Levi's, mt thng hiu mình yêu thích.\r\nSi dây c làm t cao su nhám, cm vào cm giác mn nh làm t nh… [+1261 chars]" }, { "source": { "id": null, "name": "Tinhte.vn" }, "author": "no-reply@tinhte.vn (vn_ninja), vn_ninja", "title": "5 sản phẩm hoàn toàn mới dự kiến sẽ được Apple ra mắt tại WWDC năm nay", "description": "Chỉ còn chưa đầy 2 tuần nữa là đến sự kiện WWDC 2023, và tính đến thời điểm hiện tại thì đã có đủ các tin đồn hoặc báo cáo để có một cái nhìn khái quát về những gì sẽ xuất hiện. Về phần mềm thì watchOS được cho là sẽ có một bản cập nhật lớn…", "url": "https://tinhte.vn/thread/5-san-pham-hoan-toan-moi-du-kien-se-duoc-apple-ra-mat-tai-wwdc-nam-nay.3674158/", "urlToImage": "https://photo2.tinhte.vn/data/attachment-files/2023/05/6443586_COVER-SAN-PHAM-MOI-APPLE-WWDC-TINHTE.jpg", "publishedAt": "2023-05-27T00:34:09Z", "content": "Quay tr li nm 2019, Apple ã loi b kích thc 15 inch trên nhng chic laptop ca mình khi ra mt MacBook Pro 16 inch. Và gn 4 nm sau thì có tin n nói rng kích thc này s quay tr li di dng mt chic MacBook Ai… [+336 chars]" }, { "source": { "id": "abc-news-au", "name": "ABC News (AU)" }, "author": "Jano Gibson", "title": "Spectre of ‘forest wars’ returns to Tasmania after Victoria’s decision to end native forest logging", "description": "It's been more than a decade since a peace deal was signed to put an end to Tasmania's \"forest wars\". But Victoria's decision this week to end native forest logging has reignited debate about the future of the industry in the island state.", "url": "https://www.abc.net.au/news/2023-05-27/tasmanian-timber-industry-greater-access-native-forests/102386256", "urlToImage": "https://live-production.wcms.abc-cdn.net.au/6b04406e090ff58be3cb0dcd40bdc5df?impolicy=wcms_crop_resize&cropH=1432&cropW=2546&xPos=402&yPos=328&width=862&height=485", "publishedAt": "2023-05-27T00:54:16Z", "content": "<ul><li>In short: Environmentalists say Tasmania should follow Victoria's decision to end logging in native forests but the local industry wants access increased.</li><li>What's next?: The government… [+7522 chars]" }, { "source": { "id": null, "name": "Smzdm.com" }, "author": null, "title": "Apple 苹果 Watch Series 8 智能手表 41mm GPS版 2499元包邮（需用券）", "description": "京东此款目前活动售价2899元，下单领取满1500减400元优惠券，实付低至2499元，近期好价。叠加优惠券：满1500减400元", "url": "https://www.smzdm.com/p/80741125/", "urlToImage": "https://qny.smzdm.com/202304/09/6432065d5bff19011.jpg_d250.jpg", "publishedAt": "2023-05-27T00:19:17Z", "content": "Apple Watch Series 8 Apple S8 iOS 16 watch OS 9 \r\nApple Watch Series 83256G\r\nApple Watch Series 8 3618" }, { "source": { "id": null, "name": "Ozbargain.com.au" }, "author": "Noslee", "title": "Apple M2 iPad Pro 11” 128GB Wi-Fi $1103 Delivered @ Amazon AU", "description": "Amazon listing it as 21% off for this base model.\n\nApple 2022 11-inch iPad Pro (Wi-Fi, 128GB) - (4th Generation) M2 powered.\n\nBoth colours are in stock, price best at OW would yield $1048 (with Flybuys points)", "url": "https://www.ozbargain.com.au/node/777408", "urlToImage": "https://files.ozbargain.com.au/n/08/777408x.jpg?h=2f1c43c6", "publishedAt": "2023-05-27T00:45:10Z", "content": "Amazon listing it as 21% off for this base model.\r\nApple 2022 11-inch iPad Pro (Wi-Fi, 128GB) - (4th Generation) M2 powered.\r\nBoth colours are in stock, price best at OW would yield $1048 (with Flybu… [+9 chars]" }, { "source": { "id": null, "name": "Ozbargain.com.au" }, "author": "Doy", "title": "RENPHO Elis 1 Bluetooth Digital Bathroom Scale - White $28.49 + Delivery ($0 with Prime/ $39 Spend) @ Renpho via Amazon", "description": "My Renpho scale finally broke after about 7 years of use (one of the feet came off making the readings inaccurate after I stuck it back on). So looking through the market, I was pleased to see the Renpho still wins the prize for a set of budget smart scales. …", "url": "https://www.ozbargain.com.au/node/777406", "urlToImage": "https://files.ozbargain.com.au/n/06/777406x.jpg?h=1a4092c4", "publishedAt": "2023-05-27T00:32:55Z", "content": "My Renpho scale finally broke after about 7 years of use (one of the feet came off making the readings inaccurate after I stuck it back on). So looking through the market, I was pleased to see the Re… [+847 chars]" }, { "source": { "id": null, "name": "Iphone-mania.jp" }, "author": "FT729", "title": "M2 Ultra搭載Mac StudioとMac ProがWWDCで発表される？", "description": "Macworldが、世界開発者会議（WWDC23）では、新しいハイエンドAppleシリコンであるM2 Ultraを搭載するMac StudioとMac Proが発表されるとの予想を伝えました。\n15インチMacBook Airの他に新しいMacが2機種発表か\nMacworldは、WWDC23で拡張現実（AR）/仮想現実（VR）デバイスであるReality Proヘッドセット、専用OSであるxrOSに加え、3種類の新しいMacが発表されると予想しています。\n \n「探す」アプリの設定ファイルを解析した結果、未発表の新…", "url": "https://iphone-mania.jp/news-539115/", "urlToImage": "https://iphone-mania.jp/uploads/2023/02/06/M2-Ultra-Max-Mac-mini.png", "publishedAt": "2023-05-27T00:38:48Z", "content": "MacworldWWDC23AppleM2 UltraMac StudioMac Pro15MacBook AirMac2\r\nMacworldWWDC23AR/VRReality ProOSxrOS3MacMacMac14,8Mac14,13Mac14,14MacRumors20234Macworld3115MacBook Air2M2 UltraMacMacworldM2 Ultra24CPU… [+141 chars]" }, { "source": { "id": null, "name": "Applelinkage.com" }, "author": "Al", "title": "Apple、「マイフォトストリーム」を7月26日（水）に終了", "description": "Apple Inc.が、「マイフォトストリーム」を7月26日（水）に終了すると案内しています。 マイフォトストリームは、iPhoneやiPadで撮影した写真や、Macで写真appに読み込んだ写真をiCloudサーバに自動 … 続きを読む Apple、「マイフォトストリーム」を7月26日（水）に終了 →", "url": "https://www.applelinkage.com/2023/05/27/my-photo-stream-shutdown/", "urlToImage": null, "publishedAt": "2023-05-27T00:37:12Z", "content": "iPhone 15Made for MagSafe15W" }, { "source": { "id": null, "name": "Dealnews.com" }, "author": null, "title": "Insignia F20 Series NS-32F201NA23 32\" 720p HD Smart Fire TV for $90 + free shipping", "description": "It's $20 below our February mention and $60 off list price. Buy Now at eBay \r\n Features\r\n <ul> <li>supports HDMI ARC and Apple AirPlay</li> <li>wall mount capability</li> <li>Fire TV w/ Alexa voice control</li> <li>Model: NS-32F201NA23</li> </ul>", "url": "https://www.dealnews.com/products/Insignia/Insignia-F20-Series-NS-32-F201-NA23-32-720-p-HD-Smart-Fire-TV/406865.html", "urlToImage": "https://c.dlnws.com/image/upload/f_auto,t_maximum,q_auto/content/zvae7lyprftxxy6fpnc7.jpg", "publishedAt": "2023-05-27T00:48:18Z", "content": "moreThe first 500,000 subscribers in the U.S. can reserve a dual screen smart TV, which will be shipped beginning this summer. The catch is that the second, smaller screen shows ads 24/7. According t… [+401 chars]" }, { "source": { "id": null, "name": "Softantenna.com" }, "author": "softantenna", "title": "【悲報】Appleのマイフォトストリームが2023年7月に終了", "description": "Appleは、同社が提供する写真同期サービス「マイフォトストリーム」を2023年7月26日に停止すると発表しました(MacRumors)。 マイフォトストリームは、過去30日分の画像(最大1,000枚)をiCloudにアップロードし、iPh", "url": "https://softantenna.com/blog/apple-my-photo-stream-shutting-down/", "urlToImage": "https://softantenna.com/blog/wp-content/uploads/2023/05/s_20230527_085218-2.jpg", "publishedAt": "2023-05-27T00:03:29Z", "content": "Apple2023726(MacRumors)\r\n30(1,000)iCloudiPhoneiPadiPod touchMacPCiCloudiCloud\r\n202362630iCloud726iCloud\r\n1\r\niPhoneMac\r\nAppleiCloud" }, { "source": { "id": null, "name": "Minatokobe.com" }, "author": "酔いどれ", "title": "Appleがマイフォトストリームを廃止し、iCloudフォトを拡大、知っておくべきこと", "description": "多くの人にとって、Appleの「マイフォトストリーム」機能がまだ現役であることは新しい情報かもしれませんが、本日の真のニュースは、Appleがこの夏に無料のiCloud機能を廃止することです マイフォトストリームは当初、2011年にiCloudと共に導入され、iPhone、iPad、Apple TV、Mac間で写真を同期するための無料の手段として提供されました 有料のストレージが必要でしたが、より強力なiCloudフォトライブラリ機能の登場により、「マイフォトストリーム」はやや魅力を失っていきました たとえば、「…", "url": "https://minatokobe.com/wp/apple/post-89997.html", "urlToImage": "https://minatokobe.com/wp/wp-content/uploads/2023/05/2023-05-27_09-19-34.jpg", "publishedAt": "2023-05-27T00:21:03Z", "content": "1990Mac IIci MacMac Studio M1 MAX + Studio Display,16inch MacBook Pro M1 Pro 2021, iPhone 14 Pro Max, iPhone 13 Pro Max, 12.9inch iPad Pro 2021, iPad Air,  Apple Watch Ultra, 1HomePodApple TV 4KApple… [+43 chars]" }, { "source": { "id": null, "name": "Biztoc.com" }, "author": "marketwatch.com", "title": "Broadcom stock streaks to records, leads S&P 500 gainers", "description": "Broadcom Inc. shares surged to new records and led gainers on the S&P 500 index Friday following positive Wall Street commentary, helped along by Apple Inc. earnings, ahead of the chip maker’s earnings on Thursday. Shares of Broadcom AVGO, rallied 12% to a re…", "url": "https://biztoc.com/x/fdd3a81b3f8f4b6a", "urlToImage": "https://c.biztoc.com/p/fdd3a81b3f8f4b6a/og.webp", "publishedAt": "2023-05-27T00:10:07Z", "content": "Broadcom Inc. shares surged to new records and led gainers on the S&amp;P 500 index Friday following positive Wall Street commentary, helped along by Apple Inc. earnings, ahead of the chip makers ear… [+330 chars]" }, { "source": { "id": null, "name": "Trendhunter.com" }, "author": null, "title": "All-in-One Laptop Chargers - This i-HUBIX MacBook Docking Station and Charger is Seven-in-One (TrendHunter.com)", "description": "(TrendHunter.com) The i-HUBIX MacBook docking station and charger is an all-in-one accessory for use with the Apple laptop as well as a wide range of additional devices to keep users agile when out of the house.\n\nThe...", "url": "https://www.trendhunter.com/trends/macbook-docking-station-and-charger", "urlToImage": "https://cdn.trendhunterstatic.com/thumbs/506/macbook-docking-station-and-charger.jpeg?auto=webp", "publishedAt": "2023-05-27T00:51:03Z", "content": "The i-HUBIX MacBook docking station and charger is an all-in-one accessory for use with the Apple laptop as well as a wide range of additional devices to keep users agile when out of the house.The de… [+522 chars]" }, { "source": { "id": null, "name": "Dealnews.com" }, "author": null, "title": "Insignia F20 Series NS-32F201NA23 32\" 720p HD Smart Fire TV for $90 + free shipping", "description": "It's $20 below our February mention and $60 off list price. Buy Now at eBay \r\n Features\r\n <ul> <li>supports HDMI ARC and Apple AirPlay</li> <li>wall mount capability</li> <li>Fire TV w/ Alexa voice control</li> <li>Model: NS-32F201NA23</li> </ul>", "url": "https://www.dealnews.com/products/Insignia/Insignia-F20-Series-NS-32-F201-NA23-32-720-p-HD-Smart-Fire-TV/406865.html", "urlToImage": "https://c.dlnws.com/image/upload/f_auto,t_maximum,q_auto/content/zvae7lyprftxxy6fpnc7.jpg", "publishedAt": "2023-05-27T00:48:18Z", "content": "moreThe first 500,000 subscribers in the U.S. can reserve a dual screen smart TV, which will be shipped beginning this summer. The catch is that the second, smaller screen shows ads 24/7. According t… [+401 chars]" }, { "source": { "id": null, "name": "C-sharpcorner.com" }, "author": "Virendra Thakur", "title": "FlyoutPage in .Net MAUI", "description": "FlyoutPage in .Net MAUI", "url": "https://www.c-sharpcorner.com/article/flyoutpage-in-net-maui/", "urlToImage": "https://www.c-sharpcorner.com/images/csharp-corner.png", "publishedAt": "2023-05-27T00:00:00Z", "content": "In this blog, we are going to learn about how to add FlyoutPage in .Net MAUI.\r\nPrerequisites\r\nBefore starting to develop .Net MAUI apps, Visual Studio 2022 version 17.3 or greater needs to be install… [+6592 chars]" }] }
+        console.log(response)
+
+
+        let str = ""
+        for (let item of response.articles) {
+          str = str + `
+                  <div class="card my-4 mx-2" style="width: 18rem;">
+                    <img height='150' src = "${item.urlToImage}" class="card-img-top" alt = "..." />
+                    <div class="card-body">
+                      <h5 class="card-title">${item.title.slice(0,50)}...</h5>
+                      <p class="card-text">${item.description.slice(0, 100)}...</p>
+                      <a href="${item.url}" target="_blank" class="button">Read More</a>
+                    </div>
+                  </div>`
+        }
+        document.querySelector(".content").innerHTML = str
+
+      }
+
+      fetchNews(1, "women")
+    </script>
+</body>
+
 </html>
