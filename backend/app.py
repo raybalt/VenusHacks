@@ -22,10 +22,22 @@ def yelp_default_test():
     url = "https://api.yelp.com/v3/businesses/search"
 
     querystring = {"location": "Irvine, CA", "term": "contraceptive"}
+    querystring1 = {"location": "Irvine, CA", "term": "abortion"}
+    querystring2 = {"location": "Irvine, CA", "term": "IVF"}
+    querystring3 = {"location": "Irvine, CA", "term": "menstrual"}
+    querystring4 = {"location": "Irvine, CA", "term": "Plan B"}
 
     headers = {"Authorization": "Bearer " + 'kKEL1ma2XlqXPV7sxAwD9zbYi-Jy8_pGNLzaxacWhjxVEFpRFvXu0hFbufUonkNumc0LPangXBiuWt5-cR5A-4TyjDGiCDNffeizvEC3x-gakP8I0gw0WqDs1l5yZHYx'}
 
-    response = requests.request(
+    contra_response = requests.request(
         "GET", url, headers=headers, params=querystring)
+    abort_response = requests.request(
+        "GET", url, headers=headers, params=querystring1)
+    ivf_response = requests.request(
+        "GET", url, headers=headers, params=querystring2)
+    mens_response = requests.request(
+        "GET", url, headers=headers, params=querystring3)
+    planb_response = requests.request(
+        "GET", url, headers=headers, params=querystring4)
 
-    return jsonify(response.json())
+    return jsonify(contra_response.json())
