@@ -7,7 +7,7 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-YELP_AUTH_TOKEN = 'm61qjCN2788Vu6i8a1HjzFOU_Yy-lAJ_Wfh5Y8sl81yzMjHJRDBZS8-BUd21u2Dz2sI9qU6J8j7CopHi9E3wRN-gUnbw1QABXwLoORLuPqQx9S6QFfEE08K_kCBzZHYx'
+YELP_AUTH_TOKEN = 'Wbtvkn5ry53fhvW7q0eZiugyedp1rhbKNywEqANTOFo9zQCokmiXygNsDVSWSbrYEj8tqxEopf9GjxfC1H0xRZNPFNq1RsApFR74HLQVxpHbw8DBevoxo_2_pDZzZHYx'
 
 # Access this endpoint through: http://localhost:5000/
 @app.route('/')
@@ -24,7 +24,7 @@ def yelp_default_test():
 
     querystring = {"location": "Irvine, CA", "term": termtouse}
 
-    headers = {"Authorization": "Bearer " + 'm61qjCN2788Vu6i8a1HjzFOU_Yy-lAJ_Wfh5Y8sl81yzMjHJRDBZS8-BUd21u2Dz2sI9qU6J8j7CopHi9E3wRN-gUnbw1QABXwLoORLuPqQx9S6QFfEE08K_kCBzZHYx'}
+    headers = {"Authorization": "Bearer " + 'Wbtvkn5ry53fhvW7q0eZiugyedp1rhbKNywEqANTOFo9zQCokmiXygNsDVSWSbrYEj8tqxEopf9GjxfC1H0xRZNPFNq1RsApFR74HLQVxpHbw8DBevoxo_2_pDZzZHYx'}
 
     response = requests.request(
         "GET", url, headers=headers, params=querystring)
